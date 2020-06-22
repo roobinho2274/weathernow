@@ -12,11 +12,11 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 function render(input, out, __component, component, state) {
   var data = input;
 
-  out.w("<!DOCTYPE html><html lang=pt-br><head><meta charset=UTF-8><title></title><link rel=icon href=favicon.ico type=image/x-icon><link rel=stylesheet type=text/css href=/static/css/reset.css><link rel=stylesheet type=text/css href=/static/css/home.css></head><body><header><div class=container><h1 class=title>Clima agora</h1></div></header><main><section class=container><h2>Cidades do mundo</h2><div class=botton-bar><div class=container><label for=filter-table>Filtrar cidades:</label><input type=text name=filtro id=filter-table placeholder=\"Digite o nome\"></div><div class=container><span id=erro-ajax class=invisible>Erro ao buscar cidade</span><button id=search-cities class=bto-main>Buscar cidades</button></div></div><table><thead><tr><th>Nome</th><th>Estado</th><th>País</th><th>Latitude</th><th>Longitude</th></tr></thead><tbody id=table-cities></tbody></table></section><section class=container><h2 id=title-form>Dados da cidade</h2><ul id=error-message></ul></section></main><script src=/static/js/filter.js></script><script src=/static/js/search-city.js></script>");
+  out.w("<!DOCTYPE html><html lang=pt-br><head><meta charset=UTF-8><title></title><link rel=icon href=favicon.ico type=image/x-icon><link rel=stylesheet type=text/css href=/static/css/reset.css><link rel=stylesheet type=text/css href=/static/css/home.css></head><body><header><div class=container><h2 class=title>Clima agora</h2></div></header><main><section class=container><h2>Cidades do mundo</h2><div class=botton-bar><div class=container><input type=text name=input id=inputValue placeholder=\"Digite o nome\"></div><div class=container><button id=search-cities class=bto-main>Buscar cidades</button></div></div><div class=container><span id=erro-ajax class=invisible>Falha ao buscar cidade, verique o nome digitado!</span></div><div class=description><h1 class=\"info-name information\"></h1><h1 class=\"info-country information\"></h1><h1 class=\"info-temp information\"></h1><h1 class=\"info-humidity information\"></h1><h1 class=\"info-weather information\"></h1></div></section><section class=container><h2 id=title-form>Dados da cidade</h2></section></main><script src=/static/js/search-city.js></script>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "33");
+  await_reorderer_tag({}, out, __component, "29");
 
   _preferred_script_location_tag({}, out);
 

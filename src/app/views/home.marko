@@ -10,7 +10,7 @@
   <body>
     <header>
       <div class="container">
-        <h1 class="title">Clima agora</h1>
+        <h2 class="title">Clima agora</h2>
       </div>
     </header>
     <main>
@@ -18,37 +18,29 @@
         <h2>Cidades do mundo</h2>
         <div class="botton-bar">
           <div class="container">
-            <label for="filter-table">Filtrar cidades:</label>
-            <input type="text" name="filtro" id="filter-table" placeholder="Digite o nome"/>
+            <input type="text" name="input" id="inputValue" placeholder="Digite o nome"/>
           </div>
           <div class="container">
-            <span id="erro-ajax" class="invisible">Erro ao buscar cidade</span>
             <button id="search-cities" class="bto-main">Buscar cidades</button>
           </div>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Estado</th>
-              <th>País</th>
-              <th>Latitude</th>
-              <th>Longitude</th>
-            </tr>
-          </thead>
-          <tbody id="table-cities">
-            
-          </tbody>
-        </table>
+        <div class="container">
+         <span id="erro-ajax" class="invisible">Falha ao buscar cidade, verique o nome digitado!</span>
+        </div>
+        <div class="description">
+          <h1 class="info-name information"/>
+          <h1 class="info-country information"/>
+          <h1 class="info-temp information"/>
+          <h1 class="info-humidity information"/>
+          <h1 class="info-weather information"/>
+        </div>
       </section>
       <!-- ... -->
       <section class="container">
         <h2 id="title-form">Dados da cidade</h2>
-        <ul id="error-message"/>
-        <!-- Implementar a exibição dos dados retornados pela API -->
+        <!-- Implementar a exibição dos históricos -->
       </section>
     </main>
-    <script src="/static/js/filter.js"/>
     <script src="/static/js/search-city.js"/>
   </body>
 </html>
