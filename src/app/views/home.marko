@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="container">
-         <span id="erro-ajax" class="invisible">Falha ao buscar cidade, verique o nome digitado!</span>
+          <span id="erro-ajax" class="invisible">Falha ao buscar cidade, verique o nome digitado!</span>
         </div>
         <div class="description">
           <h1 class="info-name information"/>
@@ -35,12 +35,29 @@
           <h1 class="info-weather information"/>
         </div>
       </section>
-      <!-- ... -->
       <section class="container">
         <h2 id="title-form">Dados da cidade</h2>
-        <!-- Implementar a exibição dos históricos -->
+        <table>
+          <thead>
+            <tr>
+              <th>Nº</th>
+              <th>Id da Cidade</th>
+              <th>Nome</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-pacientes">
+            <tr id="log_${log.id}" for(log in data.log)>
+              <td>${log.id}</td>
+              <td>${log.name}</td>
+              <td>
+                <a href="#">Editar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </main>
+    <script src="/static/js/index.js"/>
     <script src="/static/js/search-city.js"/>
   </body>
 </html>

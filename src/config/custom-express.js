@@ -1,5 +1,6 @@
 require('marko/node-require').install();
 require('marko/express');
+require('../../db')
 
 
 const express = require('express');

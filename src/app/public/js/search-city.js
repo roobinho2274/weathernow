@@ -27,9 +27,7 @@ botaoBuscar.addEventListener("click", function () {
       console.log(error)
     }
   });
-
   xhr.send();
-
 });
 function cleanDescription() {
 
@@ -48,14 +46,7 @@ function addCity(city) {
   cityWeather.innerHTML = city.weather[0].description;
 }
 
-function exibeMensagemErro(errors) {
-  var listaErros = document.querySelector("#mensagem-erro");
-  listaErros.innerHTML = "";
-  errors.forEach(function (error) {
-    var li = document.createElement("li");
-    console.log(error);
-    li.textContent = error;
-    listaErros.appendChild(li);
-  });
+function saveLogs(city){
+  
 }
 
